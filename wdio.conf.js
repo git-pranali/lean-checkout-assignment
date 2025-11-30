@@ -6,6 +6,7 @@ export const config = {
         browserName: 'chrome' // or "firefox", "microsoftedge", "safari"
 
     }],
+    
   framework: 'mocha',
   reporters: [
     'spec',
