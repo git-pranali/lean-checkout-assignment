@@ -4,7 +4,9 @@ import SummaryPage from '../pageobjects/summary.page.js';
 import allure from '@wdio/allure-reporter';
 
 describe('Checkout validation', () => {
+  
   it('validates totals', async () => {
+
     await browser.url('https://www.saucedemo.com');
     await LoginPage.login('standard_user','secret_sauce');
 
@@ -12,7 +14,7 @@ describe('Checkout validation', () => {
     const selected=[0,1,2];
 
     let calcTotal=0;
-    for(const i of selected){
+    for(const i of selected) {
       const price = await InventoryPage.getPrice(i);
       calcTotal+=price;
       await InventoryPage.addToCartButton(i).click();
