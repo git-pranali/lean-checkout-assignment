@@ -1,2 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
 "","2180","validates totals","","Sun Nov 30 21:15:10 IST 2025","passed","Sun Nov 30 21:15:13 IST 2025","","Checkout validation","",""
+"","1899","should select 3 random items and validate totals before checkout","","Sun Nov 30 23:00:01 IST 2025","broken","Sun Nov 30 23:00:03 IST 2025","","Checkout validation","",""
+"","1590","Lean Checkout","","Sun Nov 30 23:36:27 IST 2025","passed","Sun Nov 30 23:36:28 IST 2025","","Checkout validation","",""

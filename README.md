@@ -1,4 +1,4 @@
-# WebdriverIO Automation Framework (JavaScript + Allure)
+# WebdriverIO Automation Framework (JavaScript)
 
 This repository contains a complete WebdriverIO automation framework built using:
 - JavaScript
@@ -20,8 +20,11 @@ npm run allure:open
 ```
 test/
  ├── pageobjects/
+    ├── inventory.page.js
+    ├── login.page.js
+    ├── summary.page.js
  ├── tests/
- ├── utils/
+    ├── checkout.test.js
 wdio.conf.js
 package.json
 ```
