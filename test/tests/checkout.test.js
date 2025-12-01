@@ -8,6 +8,7 @@ describe('Checkout validation', () => {
   it('Lean Checkout', async () => {
 
     // Added delays in the code to see the execution clearly
+    const dly = 300;
 
     await browser.maximizeWindow();
     await browser.url('https://www.saucedemo.com');
@@ -22,20 +23,20 @@ describe('Checkout validation', () => {
     for (const index of selected) {
       const price = await InventoryPage.getPriceOfItem(index);
       calculatedItemTotal += price;
-      await browser.pause(400); // Comment this line if you want to remove delay
+      await browser.pause(dly); // Comment this line if you want to remove delay
       await InventoryPage.addToCartButton(index).click();
     }
 
     // Navigate to Cart → Checkout → Continue
-    await browser.pause(400); // Comment this line if you want to remove delay
+    await browser.pause(dly); // Comment this line if you want to remove delay
     await InventoryPage.goToCart();
-    await browser.pause(400); // Comment this line if you want to remove delay
+    await browser.pause(dly); // Comment this line if you want to remove delay
     await $('#checkout').click();
 
     await $('#first-name').setValue('FirstName');
     await $('#last-name').setValue('LastName');
     await $('#postal-code').setValue('400001');
-    await browser.pause(400); // Comment this line if you want to remove delay
+    await browser.pause(dly); // Comment this line if you want to remove delay
     await $('#continue').click();
 
     // SUMMARY PAGE VALIDATION
@@ -54,12 +55,12 @@ describe('Checkout validation', () => {
     await expect(uiGrandTotal).toBeCloseTo(expectedGrandTotal, 2);
     console.log('----------------------------------------------------------------');
 
-    await browser.pause(400); // Comment this line if you want to remove delay
+    await browser.pause(dly); // Comment this line if you want to remove delay
     await $('#finish').click();
     const successMessage = await $('//h2[@class="complete-header"]');
 
     console.log(successMessage);
     await expect(successMessage).toHaveText('Thank you for your order!');
-    await browser.pause(400); // Comment this line if you want to remove delay
+    await browser.pause(dly); // Comment this line if you want to remove delay
   });
 });
