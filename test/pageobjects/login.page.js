@@ -15,6 +15,7 @@ class LoginPage {
   async login(user, pass) {
     await this.username.setValue(user);
     await this.password.setValue(pass);
+    await browser.pause(400); // Comment this line if you want to remove delay
     await this.loginBtn.click();
   }
 }
