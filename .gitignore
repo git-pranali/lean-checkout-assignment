@@ -1,3 +1,9 @@
+# Dependencies
 node_modules
+
+# Test reports
 allure-results
 allure-report
+
+# Configuration files with sensitive information
+test/config/config.js
