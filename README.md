@@ -34,7 +34,6 @@ The framework uses a configuration file for credentials and base URL. Since `con
 cp test/config/config.example.js test/config/config.js
 
 # Edit config.js with your actual values (optional - defaults are provided)
-# Or set environment variables instead
 ```
 
 **Using Environment Variables (Recommended):**
@@ -83,17 +82,3 @@ WebdriverIO_Framework_Complete/
 ```
 
 
-
-## 📊 Test Reports
-
-Allure reports provide:
-- Test execution timeline
-- Screenshots on failure
-- Step-by-step test execution
-- Test history and trends
-
-Generate reports with:
-```bash
-npm run allure:generate
-npm run allure:open
-```
